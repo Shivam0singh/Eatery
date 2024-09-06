@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* font-family: "Spectral SC", serif;
+font-family: "Spectral SC", serif;
+spectral for all text, except spectral sc (small-caps) for headings. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Spectral", serif;
+    font-weight: 500;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,h2,h3{
+  font-family: "Spectral SC", serif;
+  font-weight: 700;
+}
+
+.header-title {
+  background-color: #ffffff;
+  /* height: 30vh; */
+  width: 100%;
+  text-align: center;
+  /* align-items: center; */
+  align-content: center;
+}
+
+.header-title img {
+  display: block;
+  max-width: 80%;
+  /* max-height: 25vh; */
+  margin: 0 auto;
+}
+.header-title .menu-btn {
+  color: white;
+  background-color: black;
+  text-align: center;
+  border: 3px solid rgb(64, 26, 26);
+  display: inline-block;
+  padding: 0.3rem;
+}
+
+header {
+  display: none;
+}
+
+/* Breakfast section */
+.breakfast-section {
+  padding: 1rem;
+}
+.breakfast-section {
+  background-image: url(./images/breakfast.jpg);
+  object-fit: cover;
+  /* width: 100%; */
+  background-position: 45% 23%;
+  /* height: 69vh; */
+  overflow: auto;
+}
+
+.breakfast-section h2 {
+  background-color: rgb(255, 78, 172);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.breakfast-section table,
+.breakfast-section caption {
+  background-color: rgba(0, 0, 0, 0.396);
+  text-align: left;
+  color: white;
+}
+table {
+  width: 100%;
+  padding: 1rem;
+}
+td:last-child {
+  text-align: right;
+}
+tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+tr::after {
+  grid-column: span 2;
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: rgba(211, 211, 211, 0.449);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.breakfast-section table caption {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* Lunch section */
+.lunch-section {
+  background-image: url(./images/lunch.jpg);
+  object-fit: cover;
+  /* width: 100%; */
+  background-position: 45% 23%;
+  /* height: 69vh; */
+  /* overflow: auto; */
+}
+.lunch-section {
+  padding: 1rem;
+}
+.lunch-section h2 {
+  background-color: rgb(255, 78, 172);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.lunch-section table,
+.lunch-section caption {
+  background-color: rgba(0, 0, 0, 0.396);
+  text-align: left;
+  color: white;
+}
+.lunch-section table caption {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/*Dinner Section  */
+.dinner-section {
+  background-image: url(./images/dinner.jpg);
+  object-fit: cover;
+  /* width: 100%; */
+  background-position: 45% 23%;
+  /* height: 69vh; */
+  /* overflow: auto; */
+}
+.dinner-section {
+  padding: 1rem;
+}
+.dinner-section h2 {
+  background-color: rgb(255, 78, 172);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.dinner-section table,
+.dinner-section caption {
+  background-color: rgba(0, 0, 0, 0.396);
+  text-align: left;
+  color: white;
+}
+.dinner-section table caption {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* All Staff Members */
+.all-staff-members {
+  background: linear-gradient(to bottom, #020314, #030713, #020314);
+  padding: 2rem;
+  display: grid;
+  text-align: center;
+}
+.all-staff-members img {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  display: grid;
+  z-index: 1;
+}
+.staff-parag {
+  background-color: rgba(0, 0, 0, 0.47);
+  color: white;
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin-bottom: 1rem;
+}
+.box img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.box .staff-parag {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  z-index: 3;
+  align-content: center;
+}
+.staff-parag p:first-child {
+  color: #609cd3;
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+}
+.staff-parag p:last-child {
+  font-size: 1.1rem;
+}
+
+/* Contact section */
+.contact-section {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 0.5rem;
+}
+.contact-section h2 {
+  font-size: 2rem;
+}
+.contact-section h3,
+p {
+  margin-top: 0.5rem;
+}
+.contact-section h3 {
+  text-transform: capitalize;
+}
+
+.iframe-section {
+  text-align: center;
+}
+iframe {
+  width: 100%;
+  padding: 1rem;
+}
+
+.blog-section h2 {
+  text-align: center;
+  margin: 1.4rem 0;
+}
+.blog-section {
+  padding: 1rem;
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+  display: block;
+}
+
+/* Blog section */
+.blog-section article{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(4,1fr);
+  align-items: center;
+}
+.blog-section article img{
+  grid-column: 1/-1;
+  grid-row: 1/4;
+}
+.blog-content{
+  background-color: aliceblue;
+  grid-column: 2/8;
+  grid-row: 3/-1;
+
+}
+
+/* Footer Navigation */
+.footer-navigation nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: black;
+  text-align: center;
+}
+.footer-navigation nav ul li {
+  display: inline-block;
+  padding: 0.7rem 0;
+  list-style: none;
+  border-right: 2px solid white;
+}
+
+.footer-navigation i {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.2rem;
+}
+
+.footer-navigation nav ul a {
+  display: block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+/* hidden Header Contents */
+.menu-navigation nav ul {
+  list-style: none;
+}
+.menu-navigation nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.social-icons-navigation nav ul {
+  list-style: none;
+}
+.social-icons-navigation nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (min-width: 550px) {
+  .footer-navigation {
+    display: none;
+  }
+  .header-title .menu-btn {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  header {
+    display: contents;
+  }
+  .all-header {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .header-title {
+    grid-column: 1/5;
+    grid-row: 1/-1;
+  }
+  .menu-navigation {
+    grid-column: 5/-1;
+    display: grid;
+    align-content: end;
+    text-align: center;
+    margin-right: 1.5rem;
+  }
+  .menu-navigation nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .menu-navigation nav ul li {
+    display: block;
+  }
+  /* Social media icons */
+  .social-icons-navigation {
+    grid-column: 6/-1;
+    align-content: start;
+    text-align: end;
+    margin-top: 1rem;
+    margin-right: 2.5rem;
+  }
+  .social-icons-navigation nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* main content tables and all */
+  .main-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .table-wrap {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+  }
+  .table-wrap table:nth-child(1) {
+    grid-row: span 2;
+  }
+
+  /* Parallax effect */
+  section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* My staff members */
+  .all-staff-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  .box {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+  .staff-parag {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  /* Blog section */
+  .blog-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+  }
+  .blog-section article{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    grid-template-columns: 5% 1fr 5%;
+  }
+  
+  .blog-content{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-column: 2/ 3;
+  }
+  
+}
+
+@media only screen and (min-width: 1000px) {
+  .all-header {
+    justify-content: space-evenly;
+  }
+  .header-title {
+    grid-column: 1/4;
+  }
+  .menu-navigation {
+    grid-column: 4/7;
+  }
+  .social-icons-navigation {
+    grid-column: 7/-1;
+    align-content: end;
+  }
+  .blog-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+}
